@@ -4,7 +4,7 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-<a href="http://ericcharl.es/pages/downloads/downloads/render-notification-credentials.zip" download><b>Render Notification (Credentials):</b></a>
+<a href="http://ericcharl.es/downloads/render-notification-credentials.zip" download><b>Render Notification (Credentials):</b></a>
 <br>
 <i>For this file you input your gmail info and sendto address in blender each time you open the app for a render notification</i>
 
@@ -16,7 +16,7 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-<a href="http://ericcharl.es/pages/downloads/downloads/render-notification-hardcode.zip" download><b>Render Notification (hardcode)</b></a>
+<a href="http://ericcharl.es/downloads/render-notification-hardcode.zip" download><b>Render Notification (hardcode)</b></a>
 <br>
 <i>For this file, you add your login info and sendto address to the .py file and save it before installing it as an add-on</i>
 
