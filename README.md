@@ -9,9 +9,13 @@
 <i>For this file you input your gmail info and sendto address in blender each time you open the app for a render notification</i>
 
  HOW TO USE: Install as a Blender add-on: Edit > Preferences > Add-ons > Install...
+ <br>
  In 3D view, select the Object dropdown menu, then "Set emails and password"
+ <br>
  Then enter the email that you want to send the message from (must be a gmail account), the password for that email, and the email address that you want the message to be sent to
+ <br>
    (note: you can send messages from email accounts to your phone via SMS - ex. Verizon users can send to 1115551234@vtext.com to have it delivered as a text)
+   <br>
  Then follow this link to allow less secure apps to use your gmail account (I recommend you make an account specifically for render notifications): https://myaccount.google.com/lesssecureapps
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -22,6 +26,9 @@
 
  HOW TO USE:
  Replace the indicated info below to match your gmail, password, & sendto address (make sure you replace both sections)
+ <br>
    (note: you can send messages from email accounts to your phone via SMS - ex. Verizon users can send to 1115551234@vtext.com to have it delivered as a text)
+   <br>
  Install as a Blender add-on: Edit > Preferences > Add-ons > Install...
+ <br>
  Then follow this link to allow less secure apps to use your gmail account (I recommend you make an account specifically for render notifications): https://myaccount.google.com/lesssecureapps
