@@ -32,3 +32,6 @@
  Install as a Blender add-on: Edit > Preferences > Add-ons > Install...
  <br>
  Then follow this link to allow less secure apps to use your gmail account (I recommend you make an account specifically for render notifications): https://myaccount.google.com/lesssecureapps
+ 
+ 
+ <a href="http://ericcharl.es" target="_blank">- Eric Charles</a>
