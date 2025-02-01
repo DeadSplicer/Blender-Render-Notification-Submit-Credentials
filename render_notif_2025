@@ -1,0 +1,83 @@
+bl_info = {
+    "name" : "Render Notification - Hardcoded Credentials v2",
+    "blender": (2, 81, 0),
+    "category": "Render",
+    "author": "Eric Charles, GoofyGorilla",
+    "description": "Sends an email whenever your render is finished. Open .py file in text editor before installing as add-on."
+}
+
+import bpy
+from bpy.app.handlers import persistent
+from bpy.props import *
+import smtplib
+
+# Function to send email notifications
+def send_email():
+    #------------------------------- INSERT YOUR INFORMATION HERE -------------------------------------
+    gmail_user = 'EXAMPLE@gmail.com'                     # Enter Gmail to send the message
+    gmail_password = 'ABCD EFGH IJKL MNOP'                 # Enter the app password for that Gmail account (should be 16 character code)
+    sent_from = 'EXAMPLE@gmail.com'                      # Enter Gmail to send the message (again)
+    to = ['EXAMPLE@MAIL.COM']               # Email to this address
+    #--------------------------------------------------------------------------------------------------
+
+    subject = 'Blender has finished rendering!'
+    filename = bpy.path.basename(bpy.context.blend_data.filepath)  # Get the filename
+    text = " has finished rendering."
+    body = filename + text
+    email_text = 'Subject: {}\n\n{}'.format(subject, body)
+
+    try:
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        server.login(gmail_user, gmail_password)
+        server.sendmail(gmail_user, to, email_text)
+        server.quit()
+        print("Message sent successfully!")
+    except Exception as e:
+        print(f"Failed to send message: {e}")
+
+class RenderNotif(bpy.types.Operator):
+    """My Render Notification Addon"""
+    bl_idname = "render.sendnotif"
+    bl_label = "Send notification after render is finished."
+
+    @classmethod
+    def render_notification(cls):
+        print("Render complete")
+        send_email()
+
+    def execute(self, context):
+        self.render_notification()
+        return {'FINISHED'}
+
+classes = (
+    RenderNotif,
+)
+
+def menu_func(self, context):
+    self.layout.operator(RenderNotif.bl_idname)
+
+@persistent
+def send_notification(dummy):
+    print("Render complete")
+    send_email()
+
+def register():
+    bpy.app.handlers.render_complete.append(send_notification)
+    bpy.types.VIEW3D_MT_object.append(menu_func)
+    from bpy.utils import register_class
+    for cls in classes:
+        register_class(cls)
+
+def unregister():
+    from bpy.utils import unregister_class
+    for cls in reversed(classes):
+        unregister_class(cls)
+    bpy.types.VIEW3D_MT_object.remove(menu_func)
+    bpy.app.handlers.render_complete.remove(send_notification)
+
+# This allows you to run the script directly from Blender's Text editor
+# to test the add-on without having to install it.
+if __name__ == "__main__":
+    register()
