@@ -4,7 +4,29 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-<a href="http://ericcharl.es/downloads/render-notification-credentials.zip" download><b>Render Notification (Credentials):</b></a>
+<a href="http://ericcharl.es/downloads/render_notif_2025.py" download><b>Render Notification Hardcoded v2 for 2025:</b></a>
+<br><br>
+<i>For this file, you add your login info and sendto address to the .py file and save it before installing it as an add-on</i>
+
+ HOW TO USE:
+ <br><br>
+ I recommend you make a Gmail account specifically to send render notifications.
+ <br><br>
+ Go to your Google Security Settings and enable 2-factor authentication, then go to App Passwords and Create New. Call it "Blender" and copy the 16 character code.
+ <br><br>
+ Open the render_notif_2025.py file in a text editor and replace the info in the "INSERT YOUR INFORMATION HERE" section to match your gmail_user (send from), gmail_password (16 character app code), sent_from (send from again) & send to address (what email/phone you want to receive the notification)
+ <br><br>
+   (note: you can send messages from email accounts to your phone via SMS - ex. Verizon users can send to 1115551234@vtext.com to have it delivered as a text)
+   <br><br>
+   Save the file
+   <br><br>
+ Install as a Blender add-on: Edit > Preferences > Add-ons > Install...
+ <br><br>
+ 
+ 
+---------------------------------------------------------------------------------------------------------------------
+
+<a href="http://ericcharl.es/downloads/render-notification-credentials.zip" download><b>Render Notification (Credentials):</b></a> !IMPORTANT: THIS METHOD IS OUT OF DATE
 <br>
 <i>For this file you input your gmail info and sendto address in blender each time you open the app for a render notification</i>
 
@@ -20,7 +42,7 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-<a href="http://ericcharl.es/downloads/render-notification-hardcode.zip" download><b>Render Notification (hardcode)</b></a>
+<a href="http://ericcharl.es/downloads/render-notification-hardcode.zip" download><b>Render Notification (hardcode)</b></a> !IMPORTANT: THIS METHOD IS OUT OF DATE
 <br>
 <i>For this file, you add your login info and sendto address to the .py file and save it before installing it as an add-on</i>
 
